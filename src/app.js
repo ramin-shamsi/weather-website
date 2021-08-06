@@ -51,8 +51,16 @@ app.get("/weather", (req, res) => {
         }
         res.send({
           location: geocodeData.location,
-          address: req.query.address,
           temperature: forecastData.temperature,
+          description: forecastData.description,
+          wind_speed: forecastData.wind_speed,
+          wind_degree: forecastData.wind_degree,
+          wind_dir: forecastData.wind_dir,
+          pressure: forecastData.pressure,
+          precip: forecastData.precip,
+          humidity: forecastData.humidity,
+          cloudcover: forecastData.cloudcover,
+          feelslike: forecastData.feelslike,
         });
       }
     );

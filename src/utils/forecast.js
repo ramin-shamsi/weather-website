@@ -10,6 +10,15 @@ const forecast = (longitude, latitude, callback) => {
     } else {
       callback(undefined, {
         temperature: res.body.current.temperature,
+        description: res.body.current.weather_descriptions[0],
+        wind_speed: res.body.current.wind_speed,
+        wind_degree: res.body.current.wind_degree,
+        wind_dir: res.body.current.wind_dir,
+        pressure: res.body.current.pressure,
+        precip: res.body.current.precip,
+        humidity: res.body.current.humidity,
+        cloudcover: res.body.current.cloudcover,
+        feelslike: res.body.current.feelslike,
       });
     }
   });
